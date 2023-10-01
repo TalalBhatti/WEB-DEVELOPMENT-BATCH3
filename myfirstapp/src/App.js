@@ -19,13 +19,16 @@ const [count, setCount] = useState(0)
   )
   const filtered = toLearn.filter((item) => item.id == 3)
   console.log(filtered)
+  let Reset = () => {
+    setCount(0)
+  }
   return (
     <div className='App'>
       <h1>Hello {Lanuage}. Im a beginner here</h1>
       <h2>Count is {count}</h2>
       <button onClick={()=>setCount(count+1)}>Increment</button>
       <button onClick={()=>setCount(count-1)}>Decrement</button>
-      <button onClick={()=>setCount(count==0)}>Reset</button>
+      <button onClick={Reset}>Reset</button>
 
 
       {/* <UiButton /> */}
